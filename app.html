@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/main.css" class="">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    <title>Body Mass Index Calculator</title>
+</head>
+<body>
+    <div class="container">
+      <h1>Body Mass Index Calculator</h1>
+      <div class="alert alert-success text-center" role="alert" id="anunce">
+        <p id="by">Weight has been set by Kilograms and <br>
+          Height has been set by Meters respectively
+        </p>
+    </div>
+        <div class="row">
+          <div class="col">
+            <h3>Fill your information</h3>
+            <p>Sex</p>
+            <form id="form">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" value="man" name="flexRadioDefault" id="man">
+                <label class="form-check-label" for="man">
+                  Male
+                </label>
+                </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" value="female"  name="flexRadioDefault" id="female" checked>
+                <label class="form-check-label" for="female">
+                  Female
+                </label>
+              </div>
+              <div>
+                <div class="mb-3">
+                <label for="age" class="form-label">Age</label>
+                <input type="text" class="form-control" id="age" placeholder="Insert your age">
+              </div>
+              <div class="mb-3">
+                <label for="w" class="form-label">Weight</label>
+                <input type="text" class="form-control" id="w" placeholder="0">
+              </div>
+              <div class="mb-3">
+                <label for="h" class="form-label">Height</label>
+                <input type="text" class="form-control" id="h" placeholder="0">
+              </div>
+            </div>
+            <div id="btnCalculate">
+              <button type="button" class="btn btn-success" onclick="bmi()">Calculate</button>
+            </div>
+          </form>
+          </div>
+          <div class="col">
+            <h3>Result</h3>
+            <h2 class="result" type="text">BMI=<b id="bmi_index"></b></h2>
+            <div>
+                <div id="myfirstchart" style="height: 250px;"></div>
+            </div>
+            <div>
+              <h3>Status</h3><br>
+              <ul class="status">
+                <li id="uw">Underweight: less than 18.5</li><br>
+                <li id="nw">Normal weight: 18.5 to 24.9</li><br>
+                <li id="ow">Overweight: 25.0 to 29.9</li><br>
+                <li id="o1">Obesity R1: 30.0 to 34.9</li><br>
+                <li id="o2">Obesity R2: 35.0 to 39.9</li><br>
+                <li id="o3">Obesity R3: Above 40</li><br>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <script src="script/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        
+
+</body>
+</html>
